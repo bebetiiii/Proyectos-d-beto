@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Libé - Odontología de Excelencia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #FDF5E6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #C8B39A;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo h1 {
+            font-size: 2.5rem;
+        }
+
+        header .logo p {
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+
+        .hero {
+            background: url('https://scontent-qro1-1.xx.fbcdn.net/v/t1.6435-9/91628442_118110986489549_3275500587172495360_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UeGFB0PjY_EQ7kNvgEG1lq3&_nc_ht=scontent-qro1-1.xx&_nc_gid=AsDQGixPRzmuaBXQHIM2FB-&oh=00_AYAtKhGp0EoJXOADl4aOhn28l3MJaOwFLWNxNiJniZaYgQ&oe=67107494') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #000;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            background-color: #FFD700;
+            color: #3A3D98;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #FF6B6B;
+        }
+
+        .services {
+            background-color: #FDF5E6;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .service-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 10px 0;
+            transition: transform 0.3s;
+        }
+
+        .service-box i {
+            font-size: 3rem;
+            color: #C8B39A;
+            margin-bottom: 20px;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .testimonials {
+            background-color: #EADBC8;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+
+        .testimonial p {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .contact {
+            background-color: #FDF5E6;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .info-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+
+        .info-box i {
+            font-size: 2rem;
+            color: #C8B39A;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            width: 50%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form button {
+            background-color: #FFD700;
+            color: #3A3D98;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #FF6B6B;
+        }
+
+        footer {
+            background-color: #C8B39A;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Clínica Libé</h1>
+            <p>Estética y Cirugía Dental</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#testimonials">Testimonios</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Sonrisas Perfectas, Confianza Total</h2>
+            <p>Transforma tu sonrisa con nuestros especialistas en estética y cirugía dental.</p>
+            <a href="#services" class="btn">Conoce Nuestros Servicios</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="service-container">
+            <div class="service-box">
+                <i class="fas fa-tooth"></i>
+                <h3>Estética Dental</h3>
+                <p>Blanqueamiento dental, carillas y correcciones estéticas para una sonrisa brillante.</p>
+                <img src="https://scontent-qro1-1.xx.fbcdn.net/v/t39.30808-6/300437366_505088348285846_1596370846919303261_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=FoWuawTvAb0Q7kNvgFA2AFA&_nc_ht=scontent-qro1-1.xx&_nc_gid=ATMrzObehaHkfYYeENNvGm2&oh=00_AYD9hO0fjaiJIeiWnoikbRheB74R7R_28JPSg99_8kDDhg&oe=66EEC83B" alt="Equipo de Estética Dental">
+            </div>
+            <div class="service-box">
+                <i class="fas fa-syringe"></i>
+                <h3>Cirugía Dental</h3>
+                <p>Tratamientos quirúrgicos precisos y seguros para tu salud bucal.</p>
+                <img src="https://cdn.prod.website-files.com/6335b67a8eaf371df7ce6aa9/65b9716aee2da98000d1cbd1_Un6O19LNNC4JcHfauPBaqNBTDdKLYdw4_CqskVXgJlX8xNsn3monImzSVqaxH2bXUprwoyDP-99ee8oOmUeGUfbHwDtsujI6Fmo4fs8U1i3z9QpgIllJ7bW8MwB2SKd58h7DTBOZjRrbtLJHrzbw3vQ.jpeg" alt="Equipo de Cirugía Dental">
+            </div>
+            <div class="service-box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Rehabilitación Oral</h3>
+                <p>Restauración y rehabilitación completa para recuperar la funcionalidad y estética de tu sonrisa.</p>
+                <img src="https://gacetadental.com/wp-content/uploads/2022/07/abrir-clinica-dental-documentacion.jpg" alt="Equipo de Rehabilitación Oral">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"El tratamiento de estética dental que recibí en Clínica Libé ha sido transformador. Los resultados superaron mis expectativas y el personal fue increíblemente profesional."</p>
+                <h4>- María López</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Después de mi cirugía dental, la recuperación fue mucho más rápida y cómoda de lo que pensaba. La atención y el cuidado brindado fueron excepcionales."</p>
+                <h4>- Juan Pérez</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contáctanos</h2>
+        <div class="contact-info">
+            <div class="info-box">
+                <i class="fas fa-phone"></i>
+                <p>Llámanos: 331 430 8435</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-envelope"></i>
+                <p>Email: info@clinicalibe.com</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Ubicación: 5211, Zapopan, 45030 Zapopan, Jal.</p>
+            </div>
+        </div>
+
+        <form>
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo Electrónico">
+            <textarea rows="4" placeholder="Mensaje"></textarea>
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Clínica Libé. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

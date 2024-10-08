@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr Ernesto Villa</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #007bff, #00d2ff);
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 5px solid #0056b3;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        nav {
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: inline-block;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        nav a:hover {
+            background: #495057;
+            border-radius: 5px;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .main-content, .section {
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .main-content {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+        .main-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            background: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        h2, h3 {
+            color: #007bff;
+            margin: 0;
+        }
+        .services, .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service, .testimonial {
+            padding: 20px;
+            background: #e9ecef;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service:hover, .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial {
+            background: #f4f4f4;
+            font-style: italic;
+        }
+        .contact-info p {
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .services, .testimonials {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dr. Ernesto Villa</h1>
+        <p>Cirujano en Guadalajara</p>
+    </header>
+    <nav>
+        <a href="#about">Sobre el Doctor</a>
+        <a href="#services">Servicios</a>
+        <a href="#testimonials">Testimonios</a>
+        <a href="#contact">Contacto</a>
+        <a href="contact">Encuentranos</a>
+    </nav>
+    <div class="container">
+        <div class="main-content" id="about">
+            <h2>Bienvenido</h2>
+            <p>El Dr. Ernesto Villa es un cirujano experimentado en Guadalajara, con un doctorado en cardiología en la Universidad de Phoenix, Arizona especializado en una variedad de procedimientos quirúrgicos, Sobretodo las cirugías cardiobasculares.</p>
+        </div>
+        <div class="section" id="services">
+            <h2>Servicios</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Cirugía de corazon</h3>
+                    <p>Realizamos una amplia gama de procedimientos quirúrgicos generales con la mayor precisión y cuidado dirigidos hacia el corazon y problemas cardiobasculares.</p>
+                </div>
+                <div class="service">
+                    <h3>Cirugía Laparoscópica</h3>
+                    <p>Utilizamos técnicas laparoscópicas avanzadas para procedimientos menos invasivos y recuperación más rápida.</p>
+                </div>
+                <div class="service">
+                    <h3>Consultas y Evaluaciones</h3>
+                    <p>Ofrecemos consultas exhaustivas y evaluaciones para determinar el mejor plan de tratamiento para cada paciente.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <h3>María González</h3>
+                    <p>"El Dr. Villa es un profesional excepcional. Me sentí en buenas manos durante todo el proceso quirúrgico y la recuperación fue excelente."</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Juan Pérez</h3>
+                    <p>"Muy satisfecho con el resultado de la cirugía. La atención y el cuidado del Dr. Villa fueron de primera clase."</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" id="contact">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <p><strong>Dirección:</strong> Calle Ejemplo 123, Guadalajara, Jalisco</p>
+                <p><strong>Teléfono:</strong> (33) 1234-5678</p>
+                <p><strong>Email:</strong> contacto@drenestovilla.com</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+
+        <p>&copy; 2024 Dr. Ernesto Villa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
